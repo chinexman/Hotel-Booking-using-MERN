@@ -52,7 +52,7 @@ export const MyOrders = () => {
     try {
       setloading(true);
       const data = await (
-        await axios.post("/api/bookings/getuserbookings", {
+        await axios.post("https://hotelbooking-2.herokuapp.com/api/bookings/getuserbookings", {
           userid: JSON.parse(localStorage.getItem("currentUser")).user.Id,
         })
       ).data;

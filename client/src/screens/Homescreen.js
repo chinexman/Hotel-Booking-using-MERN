@@ -68,7 +68,7 @@ function Homescreen() {
       setloading(true);
       // const rooms = await (await axios.get(`/api/rooms/getRooms/${params}`)).data;
       console.log(`/api/rooms/getRooms/${params.hotelName}`);
-      const rooms = await (await axios.get(`/api/rooms/getRooms/${params.hotelName}`)).data;
+      const rooms = await (await axios.get(`https://hotelbooking-2.herokuapp.com/api/rooms/getRooms/${params.hotelName}`)).data;
 
       console.log(rooms);
       sethotels(rooms);

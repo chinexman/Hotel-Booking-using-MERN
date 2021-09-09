@@ -29,7 +29,7 @@ export default function Registerscreen() {
         seterror(false);
         setloading(true);
         const result = await axios.post(
-          "http://localhost:5000/api/users/register",
+          "https://hotelbooking-2.herokuapp.com/api/users/register",
           user
         );
         setloading(false);

@@ -37,7 +37,7 @@ function Bookingscreen({match}) {
         
         try {
             setloading(true);
-            const data = await (await axios.get(`http://localhost:5000/api/rooms/getRoom/${roomid}`)).data;
+            const data = await (await axios.get(`https://hotelbooking-2.herokuapp.com/api/rooms/getRoom/${roomid}`)).data;
             console.log("this is the room from database  " + data);
             setroom(data);
             setloading(false);

@@ -58,7 +58,7 @@ export function Bookings() {
     try {
       setloading(true);
       const data = await (
-        await axios.get("http://localhost:5000/api/bookings/getbookings")
+        await axios.get("https://hotelbooking-2.herokuapp.com/api/bookings/getbookings")
       ).data;
       setbookings(data);
       setloading(false);
@@ -118,7 +118,7 @@ export function Rooms() {
     try {
       setloading(true);
       const data = await (
-        await axios.get("/api/rooms/getallrooms")
+        await axios.get("https://hotelbooking-2.herokuapp.com/api/rooms/getallrooms")
       ).data;
       setrooms(data);
       setloading(false);
@@ -171,7 +171,7 @@ export function Users(){
   useEffect(async() => {
 
     try {
-      const data = await (await axios.get('/api/users/alluser')).data
+      const data = await (await axios.get('https://hotelbooking-2.herokuapp.com/api/users/alluser')).data
       setusers(data)
       setloading(false)
     } catch (error) {
@@ -245,7 +245,7 @@ export function Addroom() {
     try {
       console.log(roomobj);
       const result = await axios.post(
-        "http://localhost:5000/api/rooms/addroom",
+        "https://hotelbooking-2.herokuapp.com/api/rooms/addroom",
         roomobj
       );
     } catch (error) {}
@@ -381,7 +381,7 @@ export  function AdminHotelOwner() {
           owner , hotelName ,phonenumber ,email ,address, hotelImage
       }
       try {
-          const result = await axios.post('/api/hotels/addhotel' , ownerobj)
+          const result = await axios.post('https://hotelbooking-2.herokuapp.com/api/hotels/addhotel' , ownerobj)
       } catch (error) {
           
       }

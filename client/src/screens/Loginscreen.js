@@ -28,7 +28,7 @@ export default function Loginscreen() {
       try {
         setloading(true);
         const result = await (
-          await axios.post("http://localhost:5000/api/users/login", user)
+          await axios.post("https://hotelbooking-2.herokuapp.com/api/users/login", user)
         ).data;
         console.log(result);
         localStorage.setItem("currentUser", JSON.stringify(result));

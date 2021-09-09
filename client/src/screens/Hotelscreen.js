@@ -25,7 +25,7 @@ function Hotelscreen() {
   useEffect(async () => {
     try {
       setloading(true);
-      const hotels = await (await axios.get("/api/hotels/getallhotels")).data;
+      const hotels = await (await axios.get("https://hotelbooking-2.herokuapp.com/api/hotels/getallhotels")).data;
       console.log(hotels);
       console.log(hotels.hotelName)
       sethotels(hotels);

@@ -28,7 +28,7 @@ export default function Registerscreen() {
     try {
       seterror(false)
       setloading(true);
-      const result = await (await axios.post("/api/users/login", user)).data;
+      const result = await (await axios.post("https://hotelbooking-2.herokuapp.com/api/users/login", user)).data;
       localStorage.setItem("currentUser", JSON.stringify(result));
       window.location.href = "/";
     } catch (error) {

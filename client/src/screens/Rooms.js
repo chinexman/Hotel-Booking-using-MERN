@@ -13,7 +13,7 @@ export default function Rooms() {
 
   useEffect(async () => {
     try {
-      const data = (await axios.get("http://localhost:3000/api/getAllRooms"))
+      const data = (await axios.get("https://hotelbooking-2.herokuapp.com/api/getAllRooms"))
         .data;
       setLoading(true);
       setRooms(data);
